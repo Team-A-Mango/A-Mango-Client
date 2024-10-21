@@ -79,6 +79,7 @@ time,
 mark,
 audio,
 video,
+button,
 input {
   margin: 0;
   padding: 0;
@@ -92,6 +93,7 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+  border: none;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -101,4 +103,5 @@ input:focus::-webkit-input-placeholder {
 button {
   cursor: pointer;
   outline: none;
+  border: none;
 }

@@ -1,9 +1,12 @@
-import * as S from './style'
+'use client'
+
+import Button from '@/components/common/Button'
 
 export default function Home() {
   return (
     <div>
-      <S.Button>하늘</S.Button>
+      <Button text='하이' />
+      <a>하이</a>
     </div>
   )
 }

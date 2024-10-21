@@ -1,10 +1,14 @@
 'use client'
 
 import createCache from '@emotion/cache'
-import { CacheProvider, ThemeProvider } from '@emotion/react'
+import {
+  CacheProvider,
+  ThemeProvider,
+  Theme as EmotionTheme,
+} from '@emotion/react'
 import { useServerInsertedHTML } from 'next/navigation'
 import { useState } from 'react'
-import theme from '@/styles/theme'
+import theme, { Theme as CustomTheme } from '@/styles/theme'
 
 export function EmotionProvider({ children }: { children: React.ReactNode }) {
   const [cache] = useState(() => {
@@ -24,7 +28,9 @@ export function EmotionProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <CacheProvider value={cache}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme as EmotionTheme & CustomTheme}>
+        {children}
+      </ThemeProvider>
     </CacheProvider>
   )
 }
