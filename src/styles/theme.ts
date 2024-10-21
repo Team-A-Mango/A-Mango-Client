@@ -1,4 +1,81 @@
-import { css } from '@emotion/react'
+import { css, SerializedStyles } from '@emotion/react'
+
+export interface Theme {
+  text: {
+    title: {
+      largeM: SerializedStyles
+      mediumB: SerializedStyles
+      mediumR: SerializedStyles
+      smallB: SerializedStyles
+      smallR: SerializedStyles
+    }
+    body: {
+      largeB: SerializedStyles
+      largeR: SerializedStyles
+      mediumB: SerializedStyles
+      mediumR: SerializedStyles
+    }
+    caption1: {
+      mediumB: SerializedStyles
+      mediumR: SerializedStyles
+    }
+    caption2: {
+      mediumB: SerializedStyles
+      mediumR: SerializedStyles
+    }
+  }
+  color: {
+    main: {
+      100: string
+      200: string
+      300: string
+      400: string
+      500: string
+      600: string
+      700: string
+      800: string
+    }
+    main2: {
+      100: string
+      200: string
+      300: string
+      400: string
+      500: string
+      600: string
+      700: string
+      800: string
+    }
+    gray: {
+      100: string
+      200: string
+      300: string
+      400: string
+      500: string
+      600: string
+      700: string
+      800: string
+      900: string
+    }
+    system: {
+      100: string
+      200: string
+      300: string
+      400: string
+      500: string
+      600: string
+    }
+    system2: {
+      100: string
+      200: string
+      300: string
+      400: string
+      500: string
+      600: string
+    }
+    white: string
+    black: string
+  }
+}
 
 const text = {
   title: {
@@ -74,67 +151,63 @@ const text = {
       line-height: 1.05rem;
     `,
   },
-} as const
+}
 
 const color = {
   main: {
-    100: '#F9AA38',
-    200: '#FAB859',
-    300: '#FBC67A',
-    400: '#FCD59C',
-    500: '#FDE3BD',
-    600: '#FDE3BD',
-    700: '#FEF1DE',
-    800: '#FFF8EF',
-    900: '#FFFFFF',
+    800: '#F9AA38',
+    700: '#FAB859',
+    600: '#FBC67A',
+    500: '#FCD59C',
+    400: '#FDE3BD',
+    300: '#FDE3BD',
+    200: '#FEF1DE',
+    100: '#FFF8EF',
   },
   main2: {
-    100: '#AEE0E1',
-    200: '#B7E3E4',
-    300: '#C0E7E8',
-    400: '#C9EAEB',
-    500: '#D2EEEE',
-    600: '#DBF1F2',
-    700: '#E4F5F5',
-    800: '#EDF8F8',
-    900: '#FFFFFF',
+    800: '#AEE0E1',
+    700: '#B7E3E4',
+    600: '#C0E7E8',
+    500: '#C9EAEB',
+    400: '#D2EEEE',
+    300: '#DBF1F2',
+    200: '#E4F5F5',
+    100: '#EDF8F8',
   },
   gray: {
-    100: '#434343',
-    200: '#474747',
-    300: '#7B7B7B',
-    400: '#A7A7A7',
+    900: '#434343',
+    800: '#474747',
+    700: '#7B7B7B',
+    600: '#A7A7A7',
     500: '#ABABAB',
-    600: '#BDBDBD',
-    700: '#D5D5D5',
-    800: '#ECECEC',
-    900: '#F9F9F9',
+    400: '#BDBDBD',
+    300: '#D5D5D5',
+    200: '#ECECEC',
+    100: '#F9F9F9',
   },
   system: {
-    100: '#d62828',
-    200: '#DE5353',
-    300: '#E67E7E',
-    400: '#EFA9A9',
-    500: '#F7D4D4',
-    600: '#FBEAEA',
-    700: '#FFFFFF',
+    600: '#d62828',
+    500: '#DE5353',
+    400: '#E67E7E',
+    300: '#EFA9A9',
+    200: '#F7D4D4',
+    100: '#FBEAEA',
   },
   system2: {
-    100: '#4AB519',
-    200: '#68C13F',
-    300: '#86CE66',
-    400: '#A5DA8C',
-    500: '#C3E6B2',
-    600: '#E1F3D9',
-    700: '#FFFFFF',
+    600: '#4AB519',
+    500: '#68C13F',
+    400: '#86CE66',
+    300: '#A5DA8C',
+    200: '#C3E6B2',
+    100: '#E1F3D9',
   },
   white: '#FFFFFF',
   black: '#121212',
-} as const
+}
 
 const theme = {
   text,
   color,
-} as const
+} as Theme
 
 export default theme
