@@ -93,7 +93,6 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
-  border: none;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -103,5 +102,4 @@ input:focus::-webkit-input-placeholder {
 button {
   cursor: pointer;
   outline: none;
-  border: none;
 }
