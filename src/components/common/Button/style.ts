@@ -9,4 +9,5 @@ export const Button = styled.button`
   ${theme.text.body.largeB}
   padding: 1.5rem 1.75rem;
   border-radius: 1rem;
+  white-space: nowrap;
 `
