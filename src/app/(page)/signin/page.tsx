@@ -1,16 +1,16 @@
 'use client'
 
 import * as S from './style'
-import SignupItem from '@/components/Signup/organisms/SignupItem'
+import SigninItem from '@/components/Signin/organisms/SigninItem'
 
-const Signup = () => {
+const Signin = () => {
   return (
     <S.Wrapper>
       <S.FormContainer>
-        <SignupItem />
+        <SigninItem />
       </S.FormContainer>
     </S.Wrapper>
   )
 }
 
-export default Signup
+export default Signin

@@ -11,6 +11,7 @@ const SignupItem = () => {
       <SignupForm />
       <S.ButtonContainer>
         <Button text='확인' />
+        <S.RouteLink href='/signin'>로그인하기</S.RouteLink>
       </S.ButtonContainer>
     </S.Wrapper>
   )
