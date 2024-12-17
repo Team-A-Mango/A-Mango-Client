@@ -1,2 +1,7 @@
-export { default as Logo } from './Logo'
+export { default as LogoSmall } from './LogoSmall'
 export { default as FooterLogo } from './footerLogo'
+export { default as LogoBig } from './LogoBig'
+export { default as Person } from './Person'
+export { default as Plus } from './Plus'
+export { default as Shopping } from './Shopping'
+export { default as Hamburger } from './Hamburger'
