@@ -2,12 +2,12 @@ import styled from '@emotion/styled'
 
 export const Container = styled.div`
   display: flex;
-  align-items: flex-start;
   gap: 5.0625rem;
 `
 
 export const ProfileWrapper = styled.div`
   display: flex;
+  height: 17.125rem;
   padding: 1.875rem 3.125rem;
   align-items: flex-start;
   gap: 15rem;
@@ -43,6 +43,7 @@ export const ProfileImg = styled.div`
 export const BtmBox = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
 `
 
 export const Name = styled.h1`
