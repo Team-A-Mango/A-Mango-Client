@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './style'
-import { Hamburger, LogoSmall, Person, Plus, Shopping } from '@/assets/svg'
+import { LogoSmall, Person, Plus, Shopping } from '@/assets/svg'
 import SearchBar from '@/components/SearchBar'
 const Header = () => {
   return (
@@ -21,16 +21,6 @@ const Header = () => {
           </S.Button>
         </S.ButtonWrapper>
       </S.TopBox>
-      <S.BottomBox>
-        <S.NavWrapper>
-          <S.Nav>
-            <Hamburger />
-            카테고리
-          </S.Nav>
-          <S.Nav>최근 본상품</S.Nav>
-          <S.Nav>찜한 상품</S.Nav>
-        </S.NavWrapper>
-      </S.BottomBox>
     </S.Container>
   )
 }
