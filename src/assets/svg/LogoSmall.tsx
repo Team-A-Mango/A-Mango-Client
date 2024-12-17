@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Logo = () => {
+const LogoSmall = () => {
   return (
     <svg
-      width='430'
-      height='148'
+      width='170px'
+      height='52px'
       viewBox='0 0 430 148'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
@@ -129,4 +129,4 @@ const Logo = () => {
   )
 }
 
-export default Logo
+export default LogoSmall
