@@ -12,6 +12,18 @@ export const Content = styled.div`
 `
 
 export const Container = styled.div`
-  margin: 50px auto;
+  margin: 71px auto;
   width: 1280px;
+`
+
+export const GoodsDataWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 58px;
+`
+
+export const DataContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 `
