@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100vw;
   background-color: #fff;
+  z-index: 2;
 `
 
 export const TopBox = styled.div`
