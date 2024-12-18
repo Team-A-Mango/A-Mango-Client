@@ -111,24 +111,24 @@ const PeaceSign = () => {
         <path
           d='M54.9219 11.4375L57.6156 40.55'
           stroke='#FFE746'
-          stroke-width='0.75'
-          stroke-linecap='round'
+          strokeWidth='0.75'
+          strokeLinecap='round'
         />
       </g>
       <g filter='url(#filter4_f_1754_9117)'>
         <path
           d='M80.7937 21.0625L71.4968 46.4375'
           stroke='#FFE746'
-          stroke-width='0.5'
-          stroke-linecap='round'
+          strokeWidth='0.5'
+          strokeLinecap='round'
         />
       </g>
       <g filter='url(#filter5_f_1754_9117)'>
         <path
           d='M58.1812 53.3468C62.453 53.0562 71.6499 55.0343 74.2624 65.2843'
           stroke='url(#paint18_linear_1754_9117)'
-          stroke-width='0.5'
-          stroke-linecap='round'
+          strokeWidth='0.5'
+          strokeLinecap='round'
         />
       </g>
       <defs>
@@ -139,9 +139,9 @@ const PeaceSign = () => {
           width='66.5769'
           height='87.5771'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -174,9 +174,9 @@ const PeaceSign = () => {
           width='21.9719'
           height='21.8691'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -195,9 +195,9 @@ const PeaceSign = () => {
           width='28.1235'
           height='25.1357'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -216,9 +216,9 @@ const PeaceSign = () => {
           width='5.44385'
           height='31.8623'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -237,9 +237,9 @@ const PeaceSign = () => {
           width='11.7969'
           height='27.875'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -258,9 +258,9 @@ const PeaceSign = () => {
           width='18.0813'
           height='13.9639'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -280,8 +280,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(20.1094 64.6501) scale(20.2148 55.3047)'
         >
-          <stop stop-color='#FFBF36' />
-          <stop offset='1' stop-color='#FFC736' stop-opacity='0' />
+          <stop stopColor='#FFBF36' />
+          <stop offset='1' stopColor='#FFC736' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint1_radial_1754_9117'
@@ -291,8 +291,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(29.0375 45.4844) rotate(180) scale(7.51228 26.4068)'
         >
-          <stop stop-color='#FFD237' />
-          <stop offset='1' stop-color='#FFBA32' />
+          <stop stopColor='#FFD237' />
+          <stop offset='1' stopColor='#FFBA32' />
         </radialGradient>
         <radialGradient
           id='paint2_radial_1754_9117'
@@ -302,8 +302,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(29.9759 49.5059) rotate(-117.91) scale(18.6413 30.7154)'
         >
-          <stop offset='0.664' stop-color='#F2AF43' stop-opacity='0' />
-          <stop offset='0.967' stop-color='#F2AF43' />
+          <stop offset='0.664' stopColor='#F2AF43' stopOpacity='0' />
+          <stop offset='0.967' stopColor='#F2AF43' />
         </radialGradient>
         <radialGradient
           id='paint3_radial_1754_9117'
@@ -313,8 +313,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(26.5188 33.6906) rotate(90) scale(23.7305 18.91)'
         >
-          <stop offset='0.774' stop-color='#F58E33' stop-opacity='0' />
-          <stop offset='1' stop-color='#F58E33' />
+          <stop offset='0.774' stopColor='#F58E33' stopOpacity='0' />
+          <stop offset='1' stopColor='#F58E33' />
         </radialGradient>
         <linearGradient
           id='paint4_linear_1754_9117'
@@ -324,8 +324,8 @@ const PeaceSign = () => {
           y2='44.7375'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#C3832A' />
-          <stop offset='1' stop-color='#C3832A' stop-opacity='0' />
+          <stop stopColor='#C3832A' />
+          <stop offset='1' stopColor='#C3832A' stopOpacity='0' />
         </linearGradient>
         <radialGradient
           id='paint5_radial_1754_9117'
@@ -335,8 +335,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(46.7718 41.5311) rotate(180) scale(13.7265 38.8725)'
         >
-          <stop stop-color='#FFE73F' />
-          <stop offset='1' stop-color='#EDA220' />
+          <stop stopColor='#FFE73F' />
+          <stop offset='1' stopColor='#EDA220' />
         </radialGradient>
         <radialGradient
           id='paint6_radial_1754_9117'
@@ -346,8 +346,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(43.1453 46.5428) rotate(-119.055) scale(18.2856 18.0553)'
         >
-          <stop offset='0.69' stop-color='#DE9E44' stop-opacity='0' />
-          <stop offset='1' stop-color='#DE9E44' />
+          <stop offset='0.69' stopColor='#DE9E44' stopOpacity='0' />
+          <stop offset='1' stopColor='#DE9E44' />
         </radialGradient>
         <radialGradient
           id='paint7_radial_1754_9117'
@@ -357,8 +357,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(44.0062 31.0311) rotate(104.21) scale(27.7245 20.1877)'
         >
-          <stop offset='0.733' stop-color='#E9823B' stop-opacity='0' />
-          <stop offset='1' stop-color='#E9823B' />
+          <stop offset='0.733' stopColor='#E9823B' stopOpacity='0' />
+          <stop offset='1' stopColor='#E9823B' />
         </radialGradient>
         <radialGradient
           id='paint8_radial_1754_9117'
@@ -368,8 +368,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(57.8469 76.6376) rotate(-49.852) scale(24.8751 26.5494)'
         >
-          <stop offset='0.602' stop-color='#FFE444' stop-opacity='0' />
-          <stop offset='1' stop-color='#FFE444' />
+          <stop offset='0.602' stopColor='#FFE444' stopOpacity='0' />
+          <stop offset='1' stopColor='#FFE444' />
         </radialGradient>
         <radialGradient
           id='paint9_radial_1754_9117'
@@ -379,8 +379,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(59.2594 70.5782) rotate(-68.4782) scale(12.059 17.1056)'
         >
-          <stop offset='0.414' stop-color='#F5863B' />
-          <stop offset='1' stop-color='#F5863B' stop-opacity='0' />
+          <stop offset='0.414' stopColor='#F5863B' />
+          <stop offset='1' stopColor='#F5863B' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint10_radial_1754_9117'
@@ -390,8 +390,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(50.1094 53.6032) rotate(28.673) scale(10.7673 18.0116)'
         >
-          <stop stop-color='#EEAE11' />
-          <stop offset='1' stop-color='#EEAE11' stop-opacity='0' />
+          <stop stopColor='#EEAE11' />
+          <stop offset='1' stopColor='#EEAE11' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint11_radial_1754_9117'
@@ -401,8 +401,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(3.92812 60.9157) rotate(0.261621) scale(73.7153 90.8266)'
         >
-          <stop offset='0.867' stop-color='#FFC53B' stop-opacity='0' />
-          <stop offset='1' stop-color='#FFC53B' />
+          <stop offset='0.867' stopColor='#FFC53B' stopOpacity='0' />
+          <stop offset='1' stopColor='#FFC53B' />
         </radialGradient>
         <radialGradient
           id='paint12_radial_1754_9117'
@@ -412,8 +412,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(69.6375 49.9189) rotate(135.311) scale(20.0288 21.994)'
         >
-          <stop stop-color='#FFD131' />
-          <stop offset='1' stop-color='#FFD131' stop-opacity='0' />
+          <stop stopColor='#FFD131' />
+          <stop offset='1' stopColor='#FFD131' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint13_radial_1754_9117'
@@ -423,8 +423,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(62.8344 31.7376) rotate(96.5463) scale(11.9923 1.9722)'
         >
-          <stop offset='0.499' stop-color='#CD9028' />
-          <stop offset='1' stop-color='#CD9028' stop-opacity='0' />
+          <stop offset='0.499' stopColor='#CD9028' />
+          <stop offset='1' stopColor='#CD9028' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint14_radial_1754_9117'
@@ -434,8 +434,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(58.375 8.40637) rotate(119.168) scale(8.28768 9.43261)'
         >
-          <stop stop-color='#FFE847' />
-          <stop offset='1' stop-color='#FFE847' stop-opacity='0' />
+          <stop stopColor='#FFE847' />
+          <stop offset='1' stopColor='#FFE847' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint15_radial_1754_9117'
@@ -445,8 +445,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(67.7656 22.9501) rotate(17.5256) scale(3.89157 24.8933)'
         >
-          <stop stop-color='#D19532' />
-          <stop offset='1' stop-color='#D19532' stop-opacity='0' />
+          <stop stopColor='#D19532' />
+          <stop offset='1' stopColor='#D19532' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint16_radial_1754_9117'
@@ -456,8 +456,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(73.5094 14.1501) rotate(67.8905) scale(4.33947 6.69655)'
         >
-          <stop stop-color='#D3AE52' />
-          <stop offset='1' stop-color='#D3AE52' stop-opacity='0' />
+          <stop stopColor='#D3AE52' />
+          <stop offset='1' stopColor='#D3AE52' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint17_radial_1754_9117'
@@ -467,8 +467,8 @@ const PeaceSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(83.0282 16.5662) rotate(132.709) scale(8.93247 10.1404)'
         >
-          <stop stop-color='#FFE847' />
-          <stop offset='1' stop-color='#FFE847' stop-opacity='0' />
+          <stop stopColor='#FFE847' />
+          <stop offset='1' stopColor='#FFE847' stopOpacity='0' />
         </radialGradient>
         <linearGradient
           id='paint18_linear_1754_9117'
@@ -478,8 +478,8 @@ const PeaceSign = () => {
           y2='63.775'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFE746' />
-          <stop offset='1' stop-color='#FFE746' stop-opacity='0' />
+          <stop stopColor='#FFE746' />
+          <stop offset='1' stopColor='#FFE746' stopOpacity='0' />
         </linearGradient>
       </defs>
     </svg>

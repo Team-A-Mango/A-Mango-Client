@@ -87,9 +87,9 @@ const RockSign = () => {
           width='87.5201'
           height='84.3389'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -122,9 +122,9 @@ const RockSign = () => {
           width='36.1685'
           height='27.2812'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -143,9 +143,9 @@ const RockSign = () => {
           width='2.90002'
           height='22.0469'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -165,8 +165,8 @@ const RockSign = () => {
           y2='4.35019'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FDB033' />
-          <stop offset='1' stop-color='#FFCB25' />
+          <stop stopColor='#FDB033' />
+          <stop offset='1' stopColor='#FFCB25' />
         </linearGradient>
         <radialGradient
           id='paint1_radial_1754_9094'
@@ -176,8 +176,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(34.5107 76.1439) rotate(-90) scale(27.0148 14.3092)'
         >
-          <stop stop-color='#FFD337' />
-          <stop offset='1' stop-color='#FFC42A' stop-opacity='0' />
+          <stop stopColor='#FFD337' />
+          <stop offset='1' stopColor='#FFC42A' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint2_radial_1754_9094'
@@ -187,8 +187,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(82.3764 11.9998) rotate(90) scale(31.5791 5.18091)'
         >
-          <stop stop-color='#FFD230' />
-          <stop offset='1' stop-color='#FFD230' stop-opacity='0' />
+          <stop stopColor='#FFD230' />
+          <stop offset='1' stopColor='#FFD230' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint3_radial_1754_9094'
@@ -198,8 +198,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(34.6958 9.02106) rotate(59.897) scale(8.69778 10.3959)'
         >
-          <stop stop-color='#FFEA4A' />
-          <stop offset='1' stop-color='#FFEA4A' stop-opacity='0' />
+          <stop stopColor='#FFEA4A' />
+          <stop offset='1' stopColor='#FFEA4A' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint4_radial_1754_9094'
@@ -209,8 +209,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(37.1311 13.6311) rotate(90) scale(18.3594 8.88356)'
         >
-          <stop stop-color='#FFE949' />
-          <stop offset='1' stop-color='#FFC229' />
+          <stop stopColor='#FFE949' />
+          <stop offset='1' stopColor='#FFC229' />
         </radialGradient>
         <radialGradient
           id='paint5_radial_1754_9094'
@@ -220,8 +220,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(75.9792 50.5438) rotate(-140.633) scale(23.096 20.6095)'
         >
-          <stop stop-color='#E47938' />
-          <stop offset='1' stop-color='#A95A0C' />
+          <stop stopColor='#E47938' />
+          <stop offset='1' stopColor='#A95A0C' />
         </radialGradient>
         <radialGradient
           id='paint6_radial_1754_9094'
@@ -231,8 +231,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(80.1535 9.04059) rotate(59.897) scale(8.69778 10.3959)'
         >
-          <stop stop-color='#FFEA4A' />
-          <stop offset='1' stop-color='#FFEA4A' stop-opacity='0' />
+          <stop stopColor='#FFEA4A' />
+          <stop offset='1' stopColor='#FFEA4A' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint7_radial_1754_9094'
@@ -242,8 +242,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(67.7357 25.6717) rotate(90) scale(18.3594 8.81212)'
         >
-          <stop stop-color='#FFE949' />
-          <stop offset='1' stop-color='#FFBE3E' />
+          <stop stopColor='#FFE949' />
+          <stop offset='1' stopColor='#FFBE3E' />
         </radialGradient>
         <linearGradient
           id='paint8_linear_1754_9094'
@@ -253,8 +253,8 @@ const RockSign = () => {
           y2='39.9217'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#E08C16' />
-          <stop offset='1' stop-color='#E08C16' stop-opacity='0' />
+          <stop stopColor='#E08C16' />
+          <stop offset='1' stopColor='#E08C16' stopOpacity='0' />
         </linearGradient>
         <radialGradient
           id='paint9_radial_1754_9094'
@@ -264,8 +264,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(79.0764 45.557) rotate(-90) scale(20.5108 5.76556)'
         >
-          <stop stop-color='#F27C5B' />
-          <stop offset='1' stop-color='#F27C5B' stop-opacity='0' />
+          <stop stopColor='#F27C5B' />
+          <stop offset='1' stopColor='#F27C5B' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint10_radial_1754_9094'
@@ -275,8 +275,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(52.4295 25.6717) rotate(90) scale(18.3594 8.47869)'
         >
-          <stop stop-color='#FFE949' />
-          <stop offset='1' stop-color='#FFBE3E' />
+          <stop stopColor='#FFE949' />
+          <stop offset='1' stopColor='#FFBE3E' />
         </radialGradient>
         <linearGradient
           id='paint11_linear_1754_9094'
@@ -286,8 +286,8 @@ const RockSign = () => {
           y2='40.1248'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#E08C16' />
-          <stop offset='1' stop-color='#E08C16' stop-opacity='0' />
+          <stop stopColor='#E08C16' />
+          <stop offset='1' stopColor='#E08C16' stopOpacity='0' />
         </linearGradient>
         <radialGradient
           id='paint12_radial_1754_9094'
@@ -297,8 +297,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(63.3389 45.5561) rotate(-90) scale(20.5108 4.35856)'
         >
-          <stop stop-color='#E9842F' />
-          <stop offset='1' stop-color='#E9842F' stop-opacity='0' />
+          <stop stopColor='#E9842F' />
+          <stop offset='1' stopColor='#E9842F' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint13_radial_1754_9094'
@@ -308,8 +308,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(19.9389 59.4592) rotate(-45.971) scale(8.14947 23.5637)'
         >
-          <stop stop-color='#D6983B' />
-          <stop offset='0.858' stop-color='#D6983B' stop-opacity='0' />
+          <stop stopColor='#D6983B' />
+          <stop offset='0.858' stopColor='#D6983B' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint14_radial_1754_9094'
@@ -319,8 +319,8 @@ const RockSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(9.58745 34.3219) rotate(53.588) scale(12.6678 13.0793)'
         >
-          <stop stop-color='#FFEA4A' />
-          <stop offset='1' stop-color='#FFEA4A' stop-opacity='0' />
+          <stop stopColor='#FFEA4A' />
+          <stop offset='1' stopColor='#FFEA4A' stopOpacity='0' />
         </radialGradient>
       </defs>
     </svg>

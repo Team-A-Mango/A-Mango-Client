@@ -87,39 +87,39 @@ const OkSign = () => {
         <path
           d='M30.8811 70.2754C33.3624 74.8941 39.0186 81.3566 47.0999 82.2816'
           stroke='url(#paint17_linear_1754_9153)'
-          stroke-width='0.75'
-          stroke-linecap='round'
+          strokeWidth='0.75'
+          strokeLinecap='round'
         />
       </g>
       <g filter='url(#filter2_f_1754_9153)'>
         <path
           d='M53.4624 38.9219C61.4218 40.6094 76.2874 49.6094 72.078 72.1094'
           stroke='url(#paint18_radial_1754_9153)'
-          stroke-linecap='round'
+          strokeLinecap='round'
         />
       </g>
       <g filter='url(#filter3_f_1754_9153)'>
         <path
           d='M35.7 11.2783L54.9062 42.1533'
           stroke='url(#paint19_linear_1754_9153)'
-          stroke-width='0.75'
-          stroke-linecap='round'
+          strokeWidth='0.75'
+          strokeLinecap='round'
         />
       </g>
       <g filter='url(#filter4_f_1754_9153)'>
         <path
           d='M56.678 12.3125L65.8374 45.7'
           stroke='url(#paint20_linear_1754_9153)'
-          stroke-width='0.75'
-          stroke-linecap='round'
+          strokeWidth='0.75'
+          strokeLinecap='round'
         />
       </g>
       <g filter='url(#filter5_f_1754_9153)'>
         <path
           d='M73.0781 21.4717V54.4154'
           stroke='url(#paint21_linear_1754_9153)'
-          stroke-width='0.5'
-          stroke-linecap='round'
+          strokeWidth='0.5'
+          strokeLinecap='round'
         />
       </g>
       <defs>
@@ -130,9 +130,9 @@ const OkSign = () => {
           width='58.4445'
           height='86.9143'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -165,9 +165,9 @@ const OkSign = () => {
           width='18.4688'
           height='14.2559'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -186,9 +186,9 @@ const OkSign = () => {
           width='22.3518'
           height='36.1875'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -207,9 +207,9 @@ const OkSign = () => {
           width='21.4563'
           height='33.125'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -228,9 +228,9 @@ const OkSign = () => {
           width='11.4094'
           height='35.6377'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -249,9 +249,9 @@ const OkSign = () => {
           width='1.5'
           height='34.4434'
           filterUnits='userSpaceOnUse'
-          color-interpolation-filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
             mode='normal'
             in='SourceGraphic'
@@ -271,8 +271,8 @@ const OkSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(28.9375 64.9125) rotate(90) scale(1.66547 3.57378)'
         >
-          <stop stop-color='#BE6E00' />
-          <stop offset='0.792' stop-color='#BE6E00' stop-opacity='0' />
+          <stop stopColor='#BE6E00' />
+          <stop offset='0.792' stopColor='#BE6E00' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint1_radial_1754_9153'
@@ -282,8 +282,8 @@ const OkSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(51.5812 69.8688) rotate(52.5999) scale(10.7621 13.1921)'
         >
-          <stop offset='0.416' stop-color='#D08C3B' />
-          <stop offset='0.882' stop-color='#D08C3B' stop-opacity='0' />
+          <stop offset='0.416' stopColor='#D08C3B' />
+          <stop offset='0.882' stopColor='#D08C3B' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint2_radial_1754_9153'
@@ -293,8 +293,8 @@ const OkSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(52.098 61.3593) rotate(-38.12) scale(18.4033 17.5101)'
         >
-          <stop stop-color='#E17C51' />
-          <stop offset='1' stop-color='#E17C51' stop-opacity='0' />
+          <stop stopColor='#E17C51' />
+          <stop offset='1' stopColor='#E17C51' stopOpacity='0' />
         </radialGradient>
         <radialGradient
           id='paint3_radial_1754_9153'
@@ -304,8 +304,8 @@ const OkSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(86.3517 40.1271) rotate(147.419) scale(37.1912 76.4547)'
         >
-          <stop stop-color='#FFE452' />
-          <stop offset='1' stop-color='#FFE452' stop-opacity='0' />
+          <stop stopColor='#FFE452' />
+          <stop offset='1' stopColor='#FFE452' stopOpacity='0' />
         </radialGradient>
         <linearGradient
           id='paint4_linear_1754_9153'
@@ -315,8 +315,8 @@ const OkSign = () => {
           y2='29.4063'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#DB8E1E' />
-          <stop offset='1' stop-color='#DB8E1E' stop-opacity='0' />
+          <stop stopColor='#DB8E1E' />
+          <stop offset='1' stopColor='#DB8E1E' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint5_linear_1754_9153'
@@ -326,8 +326,8 @@ const OkSign = () => {
           y2='29.7969'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#E37917' />
-          <stop offset='1' stop-color='#E37917' stop-opacity='0' />
+          <stop stopColor='#E37917' />
+          <stop offset='1' stopColor='#E37917' stopOpacity='0' />
         </linearGradient>
         <radialGradient
           id='paint6_radial_1754_9153'
@@ -337,8 +337,8 @@ const OkSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(68.1844 38.4281) rotate(-103.646) scale(9.97546 7.33846)'
         >
-          <stop stop-color='#FFDD4B' />
-          <stop offset='1' stop-color='#FFDD4B' stop-opacity='0' />
+          <stop stopColor='#FFDD4B' />
+          <stop offset='1' stopColor='#FFDD4B' stopOpacity='0' />
         </radialGradient>
         <linearGradient
           id='paint7_linear_1754_9153'
@@ -348,8 +348,8 @@ const OkSign = () => {
           y2='32.2719'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFDE3F' />
-          <stop offset='1' stop-color='#FFDE3F' stop-opacity='0' />
+          <stop stopColor='#FFDE3F' />
+          <stop offset='1' stopColor='#FFDE3F' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint8_linear_1754_9153'
@@ -359,8 +359,8 @@ const OkSign = () => {
           y2='34.15'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FAC54C' />
-          <stop offset='1' stop-color='#FAC54C' stop-opacity='0' />
+          <stop stopColor='#FAC54C' />
+          <stop offset='1' stopColor='#FAC54C' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint9_linear_1754_9153'
@@ -370,8 +370,8 @@ const OkSign = () => {
           y2='27.2469'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#D58430' />
-          <stop offset='1' stop-color='#D58430' stop-opacity='0' />
+          <stop stopColor='#D58430' />
+          <stop offset='1' stopColor='#D58430' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint10_linear_1754_9153'
@@ -381,8 +381,8 @@ const OkSign = () => {
           y2='27.825'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#E37917' />
-          <stop offset='1' stop-color='#E37917' stop-opacity='0' />
+          <stop stopColor='#E37917' />
+          <stop offset='1' stopColor='#E37917' stopOpacity='0' />
         </linearGradient>
         <radialGradient
           id='paint11_radial_1754_9153'
@@ -392,8 +392,8 @@ const OkSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(45.8829 8.44769) rotate(41.186) scale(9.53038 18.4545)'
         >
-          <stop stop-color='#DEA23E' />
-          <stop offset='1' stop-color='#DEA23E' stop-opacity='0' />
+          <stop stopColor='#DEA23E' />
+          <stop offset='1' stopColor='#DEA23E' stopOpacity='0' />
         </radialGradient>
         <linearGradient
           id='paint12_linear_1754_9153'
@@ -403,8 +403,8 @@ const OkSign = () => {
           y2='28.3188'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFE54D' />
-          <stop offset='1' stop-color='#FFE54D' stop-opacity='0' />
+          <stop stopColor='#FFE54D' />
+          <stop offset='1' stopColor='#FFE54D' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint13_linear_1754_9153'
@@ -414,8 +414,8 @@ const OkSign = () => {
           y2='26.6285'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#D58441' />
-          <stop offset='1' stop-color='#EFA230' stop-opacity='0' />
+          <stop stopColor='#D58441' />
+          <stop offset='1' stopColor='#EFA230' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint14_linear_1754_9153'
@@ -425,8 +425,8 @@ const OkSign = () => {
           y2='26.8691'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFE946' />
-          <stop offset='1' stop-color='#FFE946' stop-opacity='0' />
+          <stop stopColor='#FFE946' />
+          <stop offset='1' stopColor='#FFE946' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint15_linear_1754_9153'
@@ -436,8 +436,8 @@ const OkSign = () => {
           y2='36.0848'
           gradientUnits='userSpaceOnUse'
         >
-          <stop offset='0.612' stop-color='#FFD747' />
-          <stop offset='1' stop-color='#FFD747' stop-opacity='0' />
+          <stop offset='0.612' stopColor='#FFD747' />
+          <stop offset='1' stopColor='#FFD747' stopOpacity='0' />
         </linearGradient>
         <radialGradient
           id='paint16_radial_1754_9153'
@@ -447,8 +447,8 @@ const OkSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(29.2412 8.84091) rotate(54.462) scale(11.0865 14.5178)'
         >
-          <stop stop-color='#DEA23E' />
-          <stop offset='1' stop-color='#DEA23E' stop-opacity='0' />
+          <stop stopColor='#DEA23E' />
+          <stop offset='1' stopColor='#DEA23E' stopOpacity='0' />
         </radialGradient>
         <linearGradient
           id='paint17_linear_1754_9153'
@@ -458,8 +458,8 @@ const OkSign = () => {
           y2='84.8223'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFD535' />
-          <stop offset='1' stop-color='#FFD535' stop-opacity='0' />
+          <stop stopColor='#FFD535' />
+          <stop offset='1' stopColor='#FFD535' stopOpacity='0' />
         </linearGradient>
         <radialGradient
           id='paint18_radial_1754_9153'
@@ -469,8 +469,8 @@ const OkSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(70.7751 49.5854) rotate(153.789) scale(13.4348 64.7259)'
         >
-          <stop stop-color='#FFEB5C' />
-          <stop offset='1' stop-color='#FFE94A' stop-opacity='0' />
+          <stop stopColor='#FFEB5C' />
+          <stop offset='1' stopColor='#FFE94A' stopOpacity='0' />
         </radialGradient>
         <linearGradient
           id='paint19_linear_1754_9153'
@@ -480,8 +480,8 @@ const OkSign = () => {
           y2='47.9721'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFE746' />
-          <stop offset='1' stop-color='#FFE746' stop-opacity='0' />
+          <stop stopColor='#FFE746' />
+          <stop offset='1' stopColor='#FFE746' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint20_linear_1754_9153'
@@ -491,8 +491,8 @@ const OkSign = () => {
           y2='47.9719'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFE746' />
-          <stop offset='1' stop-color='#FFE746' stop-opacity='0' />
+          <stop stopColor='#FFE746' />
+          <stop offset='1' stopColor='#FFE746' stopOpacity='0' />
         </linearGradient>
         <linearGradient
           id='paint21_linear_1754_9153'
@@ -502,8 +502,8 @@ const OkSign = () => {
           y2='-nan'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#FFE949' />
-          <stop offset='1' stop-color='#FFE949' stop-opacity='0' />
+          <stop stopColor='#FFE949' />
+          <stop offset='1' stopColor='#FFE949' stopOpacity='0' />
         </linearGradient>
       </defs>
     </svg>

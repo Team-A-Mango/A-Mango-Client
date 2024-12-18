@@ -93,7 +93,7 @@ const CallSign = () => {
           width='84.3391'
           height='87.5205'
           filterUnits='userSpaceOnUse'
-          colorInterpolation-Filters='sRGB'
+          colorInterpolationFilters='sRGB'
         >
           <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend
@@ -335,7 +335,7 @@ const CallSign = () => {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(40.5407 19.9375) rotate(44.029) scale(8.14947 23.5637)'
         >
-          <stop stop-Color='#D6983B' />
+          <stop stopColor='#D6983B' />
           <stop offset='0.858' stopColor='#D6983B' stopOpacity='0' />
         </radialGradient>
         <radialGradient
