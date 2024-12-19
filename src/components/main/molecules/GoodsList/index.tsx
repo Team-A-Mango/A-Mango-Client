@@ -40,6 +40,7 @@ const GoodsList = () => {
             imageURL={goods.imageUrl}
             price={goods.price}
             like={goods.like}
+            id={goods.productId}
           />
         ))}
       </S.GoodsListContainer>
