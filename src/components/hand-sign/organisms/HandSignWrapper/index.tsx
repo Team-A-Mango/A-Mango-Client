@@ -22,7 +22,7 @@ const HandSignWrapper = ({ id }: { id: number }) => {
   console.log(sign)
   return (
     <S.Wrapper>
-      <Header appearance={true} />
+      <Header />
       <S.Content>
         <S.Container>
           <Title />
