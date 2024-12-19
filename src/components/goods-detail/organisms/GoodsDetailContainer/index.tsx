@@ -28,24 +28,24 @@ interface Detail {
   imageUrl: string
   profileImg: string
   inquiries: Inquiry[]
+  likes: number
+  check: boolean
 }
 
 const GoodsDetailContainer = ({ params }: Props) => {
   const [goodsDetail, setGoodsDetail] = useState<Detail | null>(null)
   const [liked, setLiked] = useState(false)
-
   const getGoodsDetail = async () => {
     try {
       const goods = await authInstance.get(`/product/${params.id}`)
       setGoodsDetail(goods.data)
+      setLiked(goods.data.check)
     } catch (err) {
       console.log(err)
     }
   }
 
   const handleLikeClick = async () => {
-    setLiked((prev) => !prev)
-
     try {
       const response = await authInstance.patch(`/product/${params.id}/like`, {
         headers: {
@@ -55,6 +55,19 @@ const GoodsDetailContainer = ({ params }: Props) => {
 
       if (response.status === 200) {
         console.log('Successfully updated like status.')
+        setLiked(!response.data.check)
+
+        const updatedLikes = response.data.likes
+        setGoodsDetail((prev) =>
+          prev
+            ? {
+                ...prev,
+                likes: updatedLikes,
+              }
+            : null,
+        )
+
+        setLiked((prev) => !prev)
       } else {
         console.error('Failed to update like status.', response)
       }
@@ -86,9 +99,10 @@ const GoodsDetailContainer = ({ params }: Props) => {
                   profileImg={goodsDetail?.profileImg}
                   author={goodsDetail?.author || '김진원'}
                 />
-                <div onClick={handleLikeClick} style={{ cursor: 'pointer' }}>
+                <S.LikeContainer onClick={handleLikeClick}>
                   {liked ? <AfterLike /> : <BeforeLike />}
-                </div>
+                  <S.LikeText>찜 {goodsDetail?.likes}</S.LikeText>
+                </S.LikeContainer>
               </div>
               <PriceContainer price={goodsDetail?.price || 0} id={params.id} />
             </S.DataContainer>
