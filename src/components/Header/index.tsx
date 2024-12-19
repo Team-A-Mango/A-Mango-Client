@@ -1,16 +1,12 @@
-import { useRouter } from 'next/navigation'
 import React from 'react'
 import * as S from './style'
 import { LogoSmall, Person, Plus, Shopping } from '@/assets/svg'
 import SearchBar from '@/components/SearchBar'
 const Header = () => {
-  const nav = useRouter()
   return (
     <S.Container>
       <S.TopBox>
-        <span onClick={() => nav.push('/')}>
-          <LogoSmall />
-        </span>
+        <LogoSmall />
         <SearchBar />
         <S.ButtonWrapper>
           <S.Button>
