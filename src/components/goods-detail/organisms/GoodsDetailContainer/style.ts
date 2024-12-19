@@ -26,4 +26,5 @@ export const DataContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 22px;
+  width: 300px;
 `
