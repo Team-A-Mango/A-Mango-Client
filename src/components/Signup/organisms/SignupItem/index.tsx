@@ -10,7 +10,7 @@ const SignupItem = () => {
   const [img, setImg] = useState<File | null>(null)
   const [email, setEmail] = useState<string>('')
   const [name, setName] = useState<string>('')
-  const [number, setNumber] = useState<string>('')
+  const [phone, setPhone] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [checkPassword, setCheckPassword] = useState<string>('')
   const router = useRouter()
@@ -30,12 +30,15 @@ const SignupItem = () => {
 
       const requestData = {
         email,
-        phone: number,
+        phone: phone,
         nickName: name,
         password,
       }
 
-      formData.append('request', JSON.stringify(requestData))
+      const blob = new Blob([JSON.stringify(requestData)], {
+        type: 'application/json',
+      })
+      formData.append('request', blob, 'request.json')
 
       const response = await authInstance.post('/auth', formData, {
         headers: {
@@ -43,8 +46,8 @@ const SignupItem = () => {
         },
       })
 
-      if (response.status === 200) {
-        router.push('/')
+      if (response.status === 201) {
+        router.push('/signin')
       } else {
         console.error('회원가입 실패', response)
       }
@@ -61,7 +64,7 @@ const SignupItem = () => {
         setImg={setImg}
         setEmail={setEmail}
         setName={setName}
-        setNumber={setNumber}
+        setPhone={setPhone}
         setPassword={setPassword}
         setCheckPassword={setCheckPassword}
       />

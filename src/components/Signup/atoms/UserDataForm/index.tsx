@@ -4,19 +4,19 @@ import Input from '@/components/common/Input'
 
 interface UserDataFormProps {
   onNameChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  onNumberChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  OnchagePhoneNumberChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const UserDataForm: React.FC<UserDataFormProps> = ({
   onNameChange,
-  onNumberChange,
+  OnchagePhoneNumberChange,
 }) => {
   return (
     <S.Wrapper>
       <Input
-        type='number'
-        placeholder='학번을 입력해주세요'
-        onChange={onNumberChange}
+        type='string'
+        placeholder='전화번호를 입력해주세요'
+        onChange={OnchagePhoneNumberChange}
       />
       <Input
         type='text'
