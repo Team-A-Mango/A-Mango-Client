@@ -87,6 +87,7 @@ const Mypage = () => {
                 price={info.price}
                 like={info.like}
                 key={info.productId}
+                id={info.productId}
               />
             ))}
           </S.GoodsList>
