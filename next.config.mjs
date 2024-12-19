@@ -10,6 +10,9 @@ const nextConfig = {
     })
     return config
   },
+  images: {
+    domains: ['a-mango-bucket.s3.ap-northeast-2.amazonaws.com'],
+  },
 }
 
 export default nextConfig

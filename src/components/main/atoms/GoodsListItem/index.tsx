@@ -1,17 +1,23 @@
 import Image from 'next/image'
 import React from 'react'
 import * as S from './style'
-import TestImg from '@/assets/png/TestImg.png'
 
-const GoodsListItem = () => {
+interface Props {
+  title: string
+  imageURL: string
+  price: number
+  like: number
+}
+
+const GoodsListItem = ({ title, imageURL, price, like }: Props) => {
   return (
     <S.ItemWrapper>
       <S.ItemContainer>
-        <Image src={TestImg} alt='테스트이미지' />
+        <Image src={imageURL} alt={title} width={100} height={100} />
         <S.TextTitleData>
-          <S.Title>뭐뭐뭐뭐뭐 제품 이름</S.Title>
-          <S.PriceText>10,000원</S.PriceText>
-          <S.SelectText>찜 10</S.SelectText>
+          <S.Title>{title}</S.Title>
+          <S.PriceText>{price}원</S.PriceText>
+          <S.SelectText>찜 {like}</S.SelectText>
         </S.TextTitleData>
       </S.ItemContainer>
     </S.ItemWrapper>
