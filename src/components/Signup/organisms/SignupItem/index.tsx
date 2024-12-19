@@ -46,8 +46,8 @@ const SignupItem = () => {
         },
       })
 
-      if (response.status === 200) {
-        router.push('/')
+      if (response.status === 201) {
+        router.push('/signin')
       } else {
         console.error('회원가입 실패', response)
       }
