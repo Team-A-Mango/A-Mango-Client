@@ -6,7 +6,7 @@ import { authInstance } from '@/api/axios'
 interface data {
   productId: number
   title: string
-  imagesUrl: string
+  imageUrl: string
   price: number
   like: number
 }
@@ -25,7 +25,8 @@ const GoodsList = () => {
 
   useEffect(() => {
     getGoodsList()
-  })
+  }, [])
+
   return (
     <S.Wrapper>
       <S.HeaderWrapper>
@@ -36,9 +37,9 @@ const GoodsList = () => {
           <GoodsListItem
             key={goods.productId}
             title={goods.title}
-            imgURL={goods.imagesUrl}
+            imageURL={goods.imageUrl}
             price={goods.price}
-            like={goods.price}
+            like={goods.like}
           />
         ))}
       </S.GoodsListContainer>

@@ -4,16 +4,16 @@ import * as S from './style'
 
 interface Props {
   title: string
-  imgURL: string
+  imageURL: string
   price: number
   like: number
 }
 
-const GoodsListItem = ({ title, imgURL, price, like }: Props) => {
+const GoodsListItem = ({ title, imageURL, price, like }: Props) => {
   return (
     <S.ItemWrapper>
       <S.ItemContainer>
-        <Image src={imgURL} alt={title} />
+        <Image src={imageURL} alt={title} width={100} height={100} />
         <S.TextTitleData>
           <S.Title>{title}</S.Title>
           <S.PriceText>{price}원</S.PriceText>
