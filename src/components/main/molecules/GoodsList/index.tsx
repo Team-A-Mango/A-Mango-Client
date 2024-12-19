@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import GoodsListItem from '../../atoms/GoodsListItem'
 import * as S from './style'
-import { authInstance } from '@/api/axios'
+import { baseInstance } from '@/api/axios'
 
 interface data {
   productId: number
@@ -16,7 +16,7 @@ const GoodsList = () => {
 
   const getGoodsList = async () => {
     try {
-      const goods = await authInstance.get('/product')
+      const goods = await baseInstance.get('/product')
       setGoodsList(goods.data)
     } catch (err) {
       console.log(err)
