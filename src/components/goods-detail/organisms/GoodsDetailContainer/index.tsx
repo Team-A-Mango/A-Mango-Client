@@ -62,7 +62,7 @@ const GoodsDetailContainer = ({ params }: Props) => {
                 profileImg={goodsDetail?.profileImg}
                 author={goodsDetail?.author || '김진원'}
               />
-              <PriceContainer price={goodsDetail?.price || 0} />
+              <PriceContainer price={goodsDetail?.price || 0} id={params.id} />
             </S.DataContainer>
           </S.GoodsDataWrapper>
         </S.Container>
