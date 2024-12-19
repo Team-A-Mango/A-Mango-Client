@@ -1,12 +1,17 @@
 import React from 'react'
 import Profile from '../../atoms/Profile'
 import * as S from './style'
+interface Props {
+  title: string
+  profileImg: string | undefined
+  author: string
+}
 
-const GoodsDeta = () => {
+const GoodsDeta = ({ title, profileImg, author }: Props) => {
   return (
     <S.Container>
-      <S.Title>안 입는 옷 팔아요</S.Title>
-      <Profile />
+      <S.Title>{title}</S.Title>
+      <Profile profileImg={profileImg} author={author} />
     </S.Container>
   )
 }
