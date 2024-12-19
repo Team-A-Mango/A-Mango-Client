@@ -1,20 +1,20 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
-import { useState } from 'react'
+import React from 'react'
+
 import { Picture } from '@/assets/icons'
 import theme from '@/styles/theme'
 
-const ImageInput = () => {
-  const [img, setImg] = useState<string | null>(null)
+interface ImageInputProps {
+  img: File | null
+  setImg: React.Dispatch<React.SetStateAction<File | null>>
+}
 
+const ImageInput: React.FC<ImageInputProps> = ({ img, setImg }) => {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const file = e.target.files?.[0]
     if (file) {
-      const imgElement = new window.Image()
-      imgElement.src = URL.createObjectURL(file)
-      imgElement.onload = () => {
-        setImg(URL.createObjectURL(file))
-      }
+      setImg(file)
     }
   }
 
@@ -24,7 +24,7 @@ const ImageInput = () => {
         {img ? (
           <ImageContainer>
             <StyledImage
-              src={img}
+              src={URL.createObjectURL(img)}
               alt='이미지'
               layout='fill'
               objectFit='contain'

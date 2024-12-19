@@ -11,15 +11,21 @@ const SigninItem: React.FC = () => {
   const [password, setPassword] = useState<string>('')
   const router = useRouter()
 
-  const handleButton = () => {
+  const handleButton = async () => {
     try {
-      authInstance.post('/auth/login', {
+      const response = await authInstance.post('/auth/login', {
         email,
         password,
       })
+
+      // 로그인 성공 시 처리
+      console.log('로그인 성공:', response.data)
       router.push('/')
-    } catch (e) {
-      console.error(e)
+    } catch (error) {
+      // 에러 처리
+      console.error('로그인 실패:', error)
+      // 사용자에게 에러 메시지 표시
+      alert('로그인에 실패했습니다. 이메일과 비밀번호를 확인해주세요.')
     }
   }
 
