@@ -10,7 +10,7 @@ interface SignupFormProps {
   setImg: React.Dispatch<React.SetStateAction<File | null>>
   setEmail: React.Dispatch<React.SetStateAction<string>>
   setName: React.Dispatch<React.SetStateAction<string>>
-  setNumber: React.Dispatch<React.SetStateAction<string>>
+  setPhone: React.Dispatch<React.SetStateAction<string>>
   setPassword: React.Dispatch<React.SetStateAction<string>>
   setCheckPassword: React.Dispatch<React.SetStateAction<string>>
 }
@@ -20,7 +20,7 @@ const SignupForm: React.FC<SignupFormProps> = ({
   setImg,
   setEmail,
   setName,
-  setNumber,
+  setPhone,
   setPassword,
   setCheckPassword,
 }) => {
@@ -30,8 +30,8 @@ const SignupForm: React.FC<SignupFormProps> = ({
   const OnchageNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value)
   }
-  const OnchageNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNumber(e.target.value)
+  const OnchagePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhone(e.target.value)
   }
 
   const OnchagePasswordCheckChange = (
@@ -53,10 +53,10 @@ const SignupForm: React.FC<SignupFormProps> = ({
         <UserEmailForm onChange={OnchageEmailChange} />
       </div>
       <div>
-        <S.Title>학번과 이름 입력하기</S.Title>
+        <S.Title>전화번호와 이름 입력하기</S.Title>
         <UserDataForm
           onNameChange={OnchageNameChange}
-          onNumberChange={OnchageNumberChange}
+          OnchagePhoneNumberChange={OnchagePhoneNumberChange}
         />
       </div>
       <div>
