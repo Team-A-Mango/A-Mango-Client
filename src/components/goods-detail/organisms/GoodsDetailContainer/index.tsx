@@ -39,8 +39,6 @@ const GoodsDetailContainer = ({ params }: Props) => {
     }
   }
 
-  console.log(goodsDetail)
-
   useEffect(() => {
     getGoodsDetail()
   }, [])

@@ -19,7 +19,6 @@ const HandSignWrapper = ({ id }: { id: number }) => {
       console.log(err)
     }
   }
-  console.log(sign)
   return (
     <S.Wrapper>
       <Header />

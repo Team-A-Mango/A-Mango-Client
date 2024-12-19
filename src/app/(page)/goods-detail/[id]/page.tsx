@@ -8,7 +8,6 @@ interface Props {
 }
 
 const GoodsDetail = ({ params }: Props) => {
-  console.log(params)
   return (
     <div>
       <GoodsDetailContainer params={params} />
