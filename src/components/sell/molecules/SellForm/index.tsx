@@ -1,7 +1,7 @@
 import React from 'react'
-import ImageInput from '../../atoms/ImageInput'
 import TypeText from '../../atoms/TypeText'
 import * as S from './style'
+import ImageInput from '@/components/common/ImageInput'
 import Input from '@/components/common/Input'
 
 const SellForm = () => {
