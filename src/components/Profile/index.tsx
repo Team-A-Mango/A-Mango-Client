@@ -1,29 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import * as S from './style'
+import { authInstance } from '@/api/axios'
 import { Mango, Setting, Wave } from '@/assets/svg'
+
+interface Me {
+  nickname: string
+  email: string
+  profile: string
+  phone: string
+}
+
 const Profile = () => {
+  const [info, setInfo] = useState<Me | null>()
+  const getMyInfo = async () => {
+    try {
+      const myInfo = await authInstance.get('/my/info')
+      setInfo(myInfo.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    getMyInfo()
+  }, [])
+
   return (
     <S.Container>
       <S.ProfileWrapper>
         <S.Profile>
           <S.TopBox>
             <S.ProfileImg>
-              <img
-                src='https://i.pinimg.com/236x/44/f9/83/44f9831be884e4c65f167b96e16fa94e.jpg'
-                alt='아무사진'
-              />
+              <img src={info?.profile} alt='아무사진' />
             </S.ProfileImg>
-            <S.Name>김진원</S.Name>
+            <S.Name>{info?.nickname}</S.Name>
           </S.TopBox>
           <S.BtmBox>
             <S.Text>
-              <h2>온도</h2> 5℃
+              <h2>전화번호</h2> {info?.phone}
             </S.Text>
             <S.Text>
-              <h2>학번</h2> 2405
-            </S.Text>
-            <S.Text>
-              <h2>이메일</h2> s23059@gsm.hs.kr
+              <h2>이메일</h2> {info?.email}
             </S.Text>
           </S.BtmBox>
         </S.Profile>

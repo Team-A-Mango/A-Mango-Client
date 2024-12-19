@@ -57,6 +57,7 @@ export const Name = styled.h1`
 export const Text = styled.span`
   display: flex;
   gap: 1.25rem;
+  align-items: center;
   color: #bdbdbd;
   font-size: 1.125rem;
   font-style: normal;
