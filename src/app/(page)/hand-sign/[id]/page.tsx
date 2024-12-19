@@ -3,10 +3,10 @@
 import React from 'react'
 import HandSignWrapper from '@/components/hand-sign/organisms/HandSignWrapper'
 
-const HandSign = () => {
+const HandSign = ({ params }: { params: { id: number } }) => {
   return (
     <div>
-      <HandSignWrapper />
+      <HandSignWrapper id={params.id} />
     </div>
   )
 }

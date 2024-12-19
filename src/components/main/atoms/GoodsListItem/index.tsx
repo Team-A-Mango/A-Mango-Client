@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 import * as S from './style'
 
@@ -7,11 +8,13 @@ interface Props {
   imageURL: string
   price: number
   like: number
+  id: number
 }
 
-const GoodsListItem = ({ title, imageURL, price, like }: Props) => {
+const GoodsListItem = ({ title, imageURL, price, like, id }: Props) => {
+  const nav = useRouter()
   return (
-    <S.ItemWrapper>
+    <S.ItemWrapper onClick={() => nav.push(`/goods-detail/${id}`)}>
       <S.ItemContainer>
         <Image src={imageURL} alt={title} width={100} height={100} />
         <S.TextTitleData>

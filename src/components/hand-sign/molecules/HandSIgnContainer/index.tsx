@@ -3,11 +3,17 @@ import React, { useState } from 'react'
 import HandSign from '../../atoms/HandSign'
 import { CallSign, OkSign, PeaceSign, RockSign } from '@/assets/svg'
 
-const HandSignContainer = () => {
+const HandSignContainer = ({
+  setSign,
+}: {
+  setSign: React.Dispatch<React.SetStateAction<string | null>>
+}) => {
   const [selectedSign, setSelectedSign] = useState<string | null>(null)
 
   const handleSelect = (text: string) => {
     setSelectedSign(text)
+    const Text = text.split(' ')[0].toUpperCase()
+    setSign(Text)
   }
 
   return (

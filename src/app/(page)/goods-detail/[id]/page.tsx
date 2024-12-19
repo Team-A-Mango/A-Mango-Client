@@ -3,10 +3,15 @@
 import React from 'react'
 import GoodsDetailContainer from '@/components/goods-detail/organisms/GoodsDetailContainer'
 
-const GoodsDetail = () => {
+interface Props {
+  params: { id: number }
+}
+
+const GoodsDetail = ({ params }: Props) => {
+  console.log(params)
   return (
     <div>
-      <GoodsDetailContainer />
+      <GoodsDetailContainer params={params} />
     </div>
   )
 }
