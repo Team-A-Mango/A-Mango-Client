@@ -5,9 +5,8 @@ import PriceContainer from '../../molecules/PriceContainer'
 import * as S from './style'
 import { authInstance } from '@/api/axios'
 import TestImg from '@/assets/png/TestImg.png'
+import { Like } from '@/assets/svg'
 import Header from '@/components/Header'
-import BeforeLike from '@/assets/svg/BeforeLike'
-import AfterLike from '@/assets/svg/AfterLike'
 
 interface Props {
   params: { id: number }
@@ -35,6 +34,8 @@ interface Detail {
 const GoodsDetailContainer = ({ params }: Props) => {
   const [goodsDetail, setGoodsDetail] = useState<Detail | null>(null)
   const [liked, setLiked] = useState(false)
+  const [mine, setMine] = useState<boolean>(false)
+  const [nick, setNick] = useState<string>('')
   const getGoodsDetail = async () => {
     try {
       const goods = await authInstance.get(`/product/${params.id}`)
@@ -75,9 +76,25 @@ const GoodsDetailContainer = ({ params }: Props) => {
     }
   }
 
+  const isMine = async () => {
+    try {
+      const myNickname = await (
+        await authInstance.get('/my/info')
+      ).data.nickname
+      setNick(myNickname)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   useEffect(() => {
     getGoodsDetail()
+    isMine()
   }, [])
+
+  useEffect(() => {
+    if (nick === goodsDetail?.author) setMine(true)
+  })
 
   return (
     <S.Wrapper>
@@ -99,11 +116,15 @@ const GoodsDetailContainer = ({ params }: Props) => {
                   author={goodsDetail?.author || '김진원'}
                 />
                 <S.LikeContainer onClick={handleLikeClick}>
-                  {liked ? <AfterLike /> : <BeforeLike />}
+                  <Like Liked={liked} />
                   <S.LikeText>찜 {goodsDetail?.likes}</S.LikeText>
                 </S.LikeContainer>
               </div>
-              <PriceContainer price={goodsDetail?.price || 0} id={params.id} />
+              <PriceContainer
+                price={goodsDetail?.price || 0}
+                id={params.id}
+                mine={mine}
+              />
             </S.DataContainer>
           </S.GoodsDataWrapper>
         </S.Container>
