@@ -55,6 +55,8 @@ const Mypage = () => {
                   price={info.price}
                   like={info.like}
                   key={info.productId}
+                  id={info.productId}
+                  type='buy'
                 />
               ))}
             </S.GoodsList>
@@ -73,7 +75,7 @@ const Mypage = () => {
                   like={info.like}
                   key={info.productId}
                   id={info.productId}
-                  type='mypage'
+                  type='sell'
                 />
               ))}
             </S.GoodsList>
