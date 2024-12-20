@@ -34,6 +34,8 @@ interface Detail {
 const GoodsDetailContainer = ({ params }: Props) => {
   const [goodsDetail, setGoodsDetail] = useState<Detail | null>(null)
   const [liked, setLiked] = useState(false)
+  const [mine, setMine] = useState<boolean>(false)
+  const [nick, setNick] = useState<string>('')
   const getGoodsDetail = async () => {
     try {
       const goods = await authInstance.get(`/product/${params.id}`)
@@ -74,9 +76,25 @@ const GoodsDetailContainer = ({ params }: Props) => {
     }
   }
 
+  const isMine = async () => {
+    try {
+      const myNickname = await (
+        await authInstance.get('/my/info')
+      ).data.nickname
+      setNick(myNickname)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   useEffect(() => {
     getGoodsDetail()
+    isMine()
   }, [])
+
+  useEffect(() => {
+    if (nick === goodsDetail?.author) setMine(true)
+  })
 
   return (
     <S.Wrapper>
@@ -102,7 +120,11 @@ const GoodsDetailContainer = ({ params }: Props) => {
                   <S.LikeText>찜 {goodsDetail?.likes}</S.LikeText>
                 </S.LikeContainer>
               </div>
-              <PriceContainer price={goodsDetail?.price || 0} id={params.id} />
+              <PriceContainer
+                price={goodsDetail?.price || 0}
+                id={params.id}
+                mine={mine}
+              />
             </S.DataContainer>
           </S.GoodsDataWrapper>
         </S.Container>
