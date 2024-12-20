@@ -27,6 +27,7 @@ export const ButtonWrapper = styled.div`
 `
 
 export const Button = styled.span`
+  cursor: pointer;
   display: flex;
   align-items: flex-end;
   gap: 0.625rem;
