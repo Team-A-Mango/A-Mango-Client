@@ -19,7 +19,7 @@ const GoodsListItem = ({ title, imageURL, price, like, id }: Props) => {
   return (
     <S.ItemWrapper onClick={routing}>
       <S.ItemContainer>
-        <Image src={imageURL} alt={title} width={100} height={100} />
+        <Image src={imageURL} alt={title} width={200} height={200} />
         <S.TextTitleData>
           <S.Title>{title}</S.Title>
           <S.PriceText>{price}원</S.PriceText>
