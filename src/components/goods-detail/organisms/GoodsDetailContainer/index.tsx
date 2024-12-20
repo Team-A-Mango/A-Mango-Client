@@ -44,7 +44,6 @@ const GoodsDetailContainer = ({ params }: Props) => {
       console.log(err)
     }
   }
-
   const handleLikeClick = async () => {
     try {
       const response = await authInstance.patch(`/product/${params.id}/like`, {

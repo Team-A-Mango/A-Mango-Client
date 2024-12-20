@@ -1,3 +1,4 @@
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 import Caution from '../../atoms/Caution'
 import Title from '../../atoms/Title'
@@ -9,25 +10,35 @@ import Header from '@/components/Header'
 
 const HandSignWrapper = ({ id }: { id: number }) => {
   const [sign, setSign] = useState<string | null>(null)
+  const [pending, setPending] = useState<boolean>(false)
+  const nav = useRouter()
   const handlingClickEvent = async () => {
     try {
-      const response = await authInstance.post(`/product/${id}/buy`, {
+      setPending(true)
+      await authInstance.post(`/product/${id}/buy`, {
         handSign: sign,
       })
-      alert(response)
+      alert('선택완료')
+      nav.push('/')
+      setPending(false)
     } catch (err) {
-      console.log(err)
+      alert('이미 구매된 상품입니다')
+      nav.push('/')
     }
   }
-  console.log(sign)
   return (
     <S.Wrapper>
-      <Header appearance={true} />
+      <Header />
       <S.Content>
         <S.Container>
           <Title />
           <HandSIgnContainer setSign={setSign} />
-          <Button type='min' text='확인' onClick={() => handlingClickEvent()} />
+          <Button
+            type='min'
+            text='확인'
+            onClick={() => handlingClickEvent()}
+            disabled={pending}
+          />
           <Caution />
         </S.Container>
       </S.Content>

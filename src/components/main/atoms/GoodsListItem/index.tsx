@@ -8,15 +8,18 @@ interface Props {
   imageURL: string
   price: number
   like: number
-  id: number
+  id?: number
 }
 
 const GoodsListItem = ({ title, imageURL, price, like, id }: Props) => {
   const nav = useRouter()
+  const routing = () => {
+    if (id) nav.push(`/goods-detail/${id}`)
+  }
   return (
-    <S.ItemWrapper onClick={() => nav.push(`/goods-detail/${id}`)}>
+    <S.ItemWrapper onClick={routing}>
       <S.ItemContainer>
-        <Image src={imageURL} alt={title} width={100} height={100} />
+        <Image src={imageURL} alt={title} width={200} height={200} />
         <S.TextTitleData>
           <S.Title>{title}</S.Title>
           <S.PriceText>{price}원</S.PriceText>

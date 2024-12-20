@@ -3,6 +3,7 @@ import theme from '@/styles/theme'
 
 export const ItemWrapper = styled.div`
   padding: 14px 16px;
+  width: 15rem;
   background-color: ${theme.color.white};
   border-radius: 14px;
 `

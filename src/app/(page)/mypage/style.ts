@@ -10,6 +10,12 @@ export const Wrapper = styled.div`
   gap: 8.88rem;
 `
 
+export const ListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4.25rem;
+`
+
 export const List = styled.div`
   display: flex;
   width: 100%;
@@ -21,7 +27,7 @@ export const List = styled.div`
 
 export const Title = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   color: #7b7b7b;
@@ -37,9 +43,10 @@ export const Title = styled.div`
 
 export const GoodsList = styled.div`
   display: flex;
-  width: 100%;
+  width: 60vw;
   gap: 1.8rem;
-  justify-content: center;
+  overflow-x: scroll;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
 `
