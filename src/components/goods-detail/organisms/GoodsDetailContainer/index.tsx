@@ -5,9 +5,8 @@ import PriceContainer from '../../molecules/PriceContainer'
 import * as S from './style'
 import { authInstance } from '@/api/axios'
 import TestImg from '@/assets/png/TestImg.png'
+import { Like } from '@/assets/svg'
 import Header from '@/components/Header'
-import BeforeLike from '@/assets/svg/BeforeLike'
-import AfterLike from '@/assets/svg/AfterLike'
 
 interface Props {
   params: { id: number }
@@ -99,7 +98,7 @@ const GoodsDetailContainer = ({ params }: Props) => {
                   author={goodsDetail?.author || '김진원'}
                 />
                 <S.LikeContainer onClick={handleLikeClick}>
-                  {liked ? <AfterLike /> : <BeforeLike />}
+                  <Like Liked={liked} />
                   <S.LikeText>찜 {goodsDetail?.likes}</S.LikeText>
                 </S.LikeContainer>
               </div>
