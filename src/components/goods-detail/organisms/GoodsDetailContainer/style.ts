@@ -26,4 +26,17 @@ export const DataContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 22px;
+  width: 300px;
+`
+
+export const LikeContainer = styled.div`
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+`
+
+export const LikeText = styled.div`
+  color: #6c6c6c;
 `
