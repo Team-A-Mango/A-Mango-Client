@@ -33,6 +33,21 @@ export const PriceText = styled.p`
   ${theme.text.title.mediumB}
 `
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const Button = styled.button`
+  width: 80px;
+  height: 20px;
+  border-radius: 12px;
+  color: ${theme.color.gray[800]};
+  ${theme.text.caption1.mediumR}
+`
+
 export const SelectText = styled.p`
   color: ${theme.color.gray[800]};
   ${theme.text.caption1.mediumR}
