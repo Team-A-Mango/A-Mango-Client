@@ -9,5 +9,5 @@ export const Container = styled.div`
 
 export const Title = styled.p`
   color: ${theme.color.black};
-  ${theme.text.title.smallB};
+  ${theme.text.title.biggest};
 `

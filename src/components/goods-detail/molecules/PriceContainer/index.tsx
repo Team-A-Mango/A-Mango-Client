@@ -3,7 +3,6 @@ import React from 'react'
 import Price from '../../atoms/Price'
 import * as S from './style'
 import { authInstance } from '@/api/axios'
-import Button from '@/components/common/Button'
 
 const PriceContainer = ({
   price,
@@ -31,7 +30,9 @@ const PriceContainer = ({
         {mine && <S.DeleteButton onClick={deletePost}>삭제</S.DeleteButton>}
       </S.Title>
       <Price price={price} />
-      <Button text='구매하기' onClick={() => nav.push(`/hand-sign/${id}`)} />
+      <S.PurchaseButton onClick={() => nav.push(`/hand-sign/${id}`)}>
+        구매하기
+      </S.PurchaseButton>
     </S.Wrappeer>
   )
 }

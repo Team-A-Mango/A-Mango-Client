@@ -15,7 +15,7 @@ interface Props {
 interface Inquiry {
   content: string
   author: string
-  profileImg: string
+  profileImag: string
 }
 
 interface Detail {
@@ -31,11 +31,19 @@ interface Detail {
   check: boolean
 }
 
+interface MyInfo {
+  nickname: string
+  email: string
+  profile: string
+  phone: string
+}
+
 const GoodsDetailContainer = ({ params }: Props) => {
   const [goodsDetail, setGoodsDetail] = useState<Detail | null>(null)
   const [liked, setLiked] = useState(false)
   const [mine, setMine] = useState<boolean>(false)
-  const [nick, setNick] = useState<string>('')
+  const [myInfo, setMyInfo] = useState<MyInfo | null>()
+  const [comment, setComment] = useState<string>('')
   const getGoodsDetail = async () => {
     try {
       const goods = await authInstance.get(`/product/${params.id}`)
@@ -78,12 +86,27 @@ const GoodsDetailContainer = ({ params }: Props) => {
 
   const isMine = async () => {
     try {
-      const myNickname = await (
-        await authInstance.get('/my/info')
-      ).data.nickname
-      setNick(myNickname)
+      const my = await (await authInstance.get('/my/info')).data
+      setMyInfo(my)
     } catch (error) {
       console.log(error)
+    }
+  }
+
+  const addComment = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const input = document.getElementById('input')
+    try {
+      if (comment.length <= 0) {
+        alert('댓글을 작성하지 않으셨습니다.')
+        input?.focus()
+        return false
+      }
+      await authInstance.post(`/inquiry/${params.id}`, {
+        content: comment,
+      })
+    } catch (e) {
+      console.log(e)
     }
   }
 
@@ -93,7 +116,7 @@ const GoodsDetailContainer = ({ params }: Props) => {
   }, [])
 
   useEffect(() => {
-    if (nick === goodsDetail?.author) setMine(true)
+    if (myInfo?.nickname === goodsDetail?.author) setMine(true)
   })
 
   return (
@@ -102,10 +125,10 @@ const GoodsDetailContainer = ({ params }: Props) => {
       <S.Content>
         <S.Container>
           <S.GoodsDataWrapper>
-            <Image
+            <S.Img
+              width={500}
+              height={500}
               src={goodsDetail?.imageUrl || TestImg}
-              width={280}
-              height={280}
               alt={goodsDetail?.title || '테스트 이미지'}
             />
             <S.DataContainer>
@@ -117,7 +140,7 @@ const GoodsDetailContainer = ({ params }: Props) => {
                 />
                 <S.LikeContainer onClick={handleLikeClick}>
                   <Like Liked={liked} />
-                  <S.LikeText>찜 {goodsDetail?.likes}</S.LikeText>
+                  <S.LikeText>{goodsDetail?.likes}</S.LikeText>
                 </S.LikeContainer>
               </div>
               <PriceContainer
@@ -125,8 +148,63 @@ const GoodsDetailContainer = ({ params }: Props) => {
                 id={params.id}
                 mine={mine}
               />
+              <S.CommentButton
+                onClick={() => {
+                  const input = document.getElementById('input')
+                  input?.focus()
+                }}
+              >
+                댓글 쓰기
+              </S.CommentButton>
             </S.DataContainer>
           </S.GoodsDataWrapper>
+          <S.CommentListWrapper>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1.5rem',
+              }}
+            >
+              <S.CommentTitle>
+                <h2>댓글</h2> {`${0}개`}
+              </S.CommentTitle>
+              <S.CommentInputWrapper onSubmit={addComment}>
+                <S.CommentProfile style={{ borderRight: '1px solid #d5d5d5' }}>
+                  <Image
+                    src={myInfo?.profile || TestImg}
+                    alt={'프로필 이미지'}
+                    width={26}
+                    height={26}
+                  />
+                  <h2>{myInfo?.nickname}</h2>
+                </S.CommentProfile>
+                <S.CommentInput
+                  type='text'
+                  placeholder='댓글 작성하기'
+                  id='input'
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                />
+              </S.CommentInputWrapper>
+            </div>
+            <S.CommentList>
+              {goodsDetail?.inquiries.map((item, idx) => (
+                <S.Comment key={idx}>
+                  <S.CommentProfile>
+                    <Image
+                      src={item.profileImag || TestImg}
+                      alt={'프로�� 이미지'}
+                      width={26}
+                      height={26}
+                    />
+                    <h2>{item.author}</h2>
+                  </S.CommentProfile>
+                  <p>{item.content}</p>
+                </S.Comment>
+              ))}
+            </S.CommentList>
+          </S.CommentListWrapper>
         </S.Container>
       </S.Content>
     </S.Wrapper>

@@ -3,6 +3,7 @@ import { css, SerializedStyles } from '@emotion/react'
 export interface Theme {
   text: {
     title: {
+      biggest: SerializedStyles
       largeM: SerializedStyles
       mediumB: SerializedStyles
       mediumR: SerializedStyles
@@ -10,6 +11,8 @@ export interface Theme {
       smallR: SerializedStyles
     }
     body: {
+      biggest: SerializedStyles
+      regular: SerializedStyles
       largeB: SerializedStyles
       largeR: SerializedStyles
       mediumB: SerializedStyles
@@ -79,6 +82,11 @@ export interface Theme {
 
 const text = {
   title: {
+    biggest: css`
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 120%;
+    `,
     largeM: css`
       font-size: 2rem;
       font-weight: 600;
@@ -106,6 +114,16 @@ const text = {
     `,
   },
   body: {
+    biggest: css`
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 120%;
+    `,
+    regular: css`
+      font-size: 1.875rem;
+      font-weight: 600;
+      line-height: 120%;
+    `,
     largeB: css`
       font-size: 1.125rem;
       font-weight: 600;
