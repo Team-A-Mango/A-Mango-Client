@@ -15,7 +15,7 @@ export const Title = styled.div`
 
 export const PriceText = styled.p`
   color: ${theme.color.gray[800]};
-  ${theme.text.body.mediumR};
+  ${theme.text.body.largeR};
 `
 
 export const DeleteButton = styled.div`
@@ -28,4 +28,17 @@ export const DeleteButton = styled.div`
   cursor: pointer;
   font-size: 0.8rem;
   color: #ed3434;
+`
+
+export const PurchaseButton = styled.button`
+  display: flex;
+  width: 100%;
+  padding: 1.25rem 1.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 1rem;
+  background: #f9aa38;
+  color: #fff;
+  ${theme.text.body.regular}
 `

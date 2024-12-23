@@ -7,4 +7,5 @@ export const Price = styled.div`
   background-color: ${theme.color.white};
   border-radius: 16px;
   border: 1px solid ${theme.color.gray[200]};
+  ${theme.text.body.biggest}
 `
