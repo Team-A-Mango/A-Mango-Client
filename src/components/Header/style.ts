@@ -2,17 +2,11 @@ import styled from '@emotion/styled'
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100vw;
+  width: 100%;
+  height: 80px;
   background-color: #fff;
-  z-index: 2;
-`
-
-export const TopBox = styled.div`
-  display: flex;
-  gap: 9.25rem;
-  padding: 1.8rem 0;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 `
 
 export const Logo = styled.div`
