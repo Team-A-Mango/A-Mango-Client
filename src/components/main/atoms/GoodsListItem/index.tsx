@@ -27,9 +27,16 @@ const GoodsListItem = ({
     if (id) nav.push(`/goods-detail/${id}`)
   }
 
-  const handleButtonClick = (event: React.MouseEvent) => {
+  const handleButtonClick = async (event: React.MouseEvent, number: number) => {
     event.stopPropagation()
-    authInstance.patch(`/product/${id}/stock`)
+    try {
+      await authInstance.patch(`/product/${id}/stock`, {
+        storageNumber: number,
+      })
+      alert('보관 확인요청을 보내었습니다.')
+    } catch (error) {
+      alert(error.response.data.statusMessage)
+    }
   }
   const success = async (event?: React.MouseEvent) => {
     event?.stopPropagation()
@@ -57,7 +64,22 @@ const GoodsListItem = ({
           <S.ButtonContainer>
             <S.SelectText>찜 {like}</S.SelectText>
             {type === 'sell' && (
-              <S.Button onClick={handleButtonClick}>보관완료</S.Button>
+              <>
+                <S.Button
+                  onClick={(event) => {
+                    handleButtonClick(event, 1)
+                  }}
+                >
+                  <p>1번 보관함</p>
+                </S.Button>
+                <S.Button
+                  onClick={(event) => {
+                    handleButtonClick(event, 2)
+                  }}
+                >
+                  <p>2번 보관함</p>
+                </S.Button>
+              </>
             )}
             {type === 'buy' && <S.Button onClick={success}>구매 완료</S.Button>}
           </S.ButtonContainer>
