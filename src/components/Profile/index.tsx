@@ -1,6 +1,9 @@
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import * as S from './style'
 import { authInstance } from '@/api/axios'
+import TestImg from '@/assets/png/TestImg.png'
 import { Mango, Setting, Wave } from '@/assets/svg'
 
 interface Me {
@@ -12,6 +15,7 @@ interface Me {
 
 const Profile = () => {
   const [info, setInfo] = useState<Me | null>()
+  const nav = useRouter()
   const getMyInfo = async () => {
     try {
       const myInfo = await authInstance.get('/my/info')
@@ -19,6 +23,12 @@ const Profile = () => {
     } catch (err) {
       console.log(err)
     }
+  }
+  const logout = () => {
+    authInstance.delete('/auth')
+    localStorage.clear()
+    alert('로그아웃 되었습니다')
+    nav.push('/')
   }
 
   useEffect(() => {
@@ -31,7 +41,12 @@ const Profile = () => {
         <S.Profile>
           <S.TopBox>
             <S.ProfileImg>
-              <img src={info?.profile} alt='아무사진' />
+              <Image
+                width={100}
+                height={100}
+                src={info?.profile || TestImg}
+                alt='아무사진'
+              />
             </S.ProfileImg>
             <S.Name>{info?.nickname}</S.Name>
           </S.TopBox>
@@ -41,6 +56,9 @@ const Profile = () => {
             </S.Text>
             <S.Text>
               <h2>이메일</h2> {info?.email}
+            </S.Text>
+            <S.Text onClick={logout}>
+              <h3>로그아웃</h3>
             </S.Text>
           </S.BtmBox>
         </S.Profile>

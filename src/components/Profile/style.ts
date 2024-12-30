@@ -70,6 +70,13 @@ export const Text = styled.span`
     font-weight: 600;
     line-height: 120%; /* 1.35rem */
   }
+  h3 {
+    color: #ff2a00;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 1.35rem */
+  }
 `
 
 export const Setting = styled.span`
