@@ -42,3 +42,8 @@ export const PurchaseButton = styled.button`
   color: #fff;
   ${theme.text.body.regular}
 `
+
+export const AccountText = styled.p`
+  color: ${theme.color.black};
+  ${theme.text.body.regular}
+`

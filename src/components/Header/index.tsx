@@ -1,5 +1,5 @@
 import { usePathname, useRouter } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as S from './style'
 import { authInstance } from '@/api/axios'
 import { LogoSmall, Person, Plus } from '@/assets/svg'
@@ -13,16 +13,22 @@ const Header = () => {
 
   const [searchData, setSearchData] = useState('')
   const [name, setName] = useState('')
-  const getName = async () => {
-    try {
-      const userInfo = await authInstance.get('/my/info')
-      setName(userInfo.data.nickname)
-    } catch (err) {
-      console.log(err)
-    }
-  }
 
-  localStorage.getItem('accessToken') && getName()
+  useEffect(() => {
+    const getName = async () => {
+      try {
+        const userInfo = await authInstance.get('/my/info')
+        setName(userInfo.data.nickname)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+
+    // 마운트 시 localStorage에 accessToken이 있으면 getName 호출
+    if (localStorage.getItem('accessToken')) {
+      getName()
+    }
+  }, []) // 빈 의존성 배열로 설정하여 마운트 시 한 번만 실행
 
   return (
     <S.Container>

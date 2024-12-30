@@ -10,6 +10,7 @@ interface Props {
   setTitle: React.Dispatch<React.SetStateAction<string>>
   setDescription: React.Dispatch<React.SetStateAction<string>>
   setPrice: React.Dispatch<React.SetStateAction<number | null>>
+  setAccount: React.Dispatch<React.SetStateAction<string>>
 }
 
 const SellForm: React.FC<Props> = ({
@@ -18,6 +19,7 @@ const SellForm: React.FC<Props> = ({
   setTitle,
   setDescription,
   setPrice,
+  setAccount,
 }) => {
   const onChangeTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value)
@@ -34,7 +36,9 @@ const SellForm: React.FC<Props> = ({
     const numberValue = value ? parseFloat(value) : null
     setPrice(numberValue)
   }
-
+  const onChangeAccountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAccount(e.target.value)
+  }
   return (
     <S.Wrapper>
       <S.ItemContainer>
@@ -52,6 +56,10 @@ const SellForm: React.FC<Props> = ({
       <S.ItemContainer>
         <TypeText content='상품 상세 설명' />
         <Input type='text' onChange={onChangeDescriptionChange} />
+      </S.ItemContainer>
+      <S.ItemContainer>
+        <TypeText content='계좌 작성' />
+        <Input type='text' onChange={onChangeAccountChange} />
       </S.ItemContainer>
     </S.Wrapper>
   )

@@ -29,6 +29,7 @@ interface Detail {
   inquiries: Inquiry[]
   likes: number
   check: boolean
+  account: string
 }
 
 interface MyInfo {
@@ -144,6 +145,7 @@ const GoodsDetailContainer = ({ params }: Props) => {
               </div>
               <PriceContainer
                 price={goodsDetail?.price || 0}
+                account={goodsDetail?.account}
                 id={params.id}
                 mine={mine}
               />
