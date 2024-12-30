@@ -12,6 +12,7 @@ const SellWrapper = () => {
   const [title, setTitle] = useState<string>('')
   const [description, setDescription] = useState<string>('')
   const [price, setPrice] = useState<number | null>(null)
+  const [account, setAccount] = useState<string>('')
   const router = useRouter()
 
   const handleButton = async () => {
@@ -26,6 +27,7 @@ const SellWrapper = () => {
         title,
         description,
         price,
+        account,
       }
 
       const blob = new Blob([JSON.stringify(requestData)], {
@@ -59,6 +61,7 @@ const SellWrapper = () => {
             setTitle={setTitle}
             setDescription={setDescription}
             setPrice={setPrice}
+            setAccount={setAccount}
           />
           <Button onClick={handleButton} text='상품 올리기' />
         </S.Container>

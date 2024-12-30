@@ -8,10 +8,12 @@ const PriceContainer = ({
   price,
   id,
   mine,
+  account,
 }: {
   price: number
   id: number
   mine: boolean
+  account: string | undefined
 }) => {
   const nav = useRouter()
   const deletePost = async () => {
@@ -30,6 +32,7 @@ const PriceContainer = ({
         {mine && <S.DeleteButton onClick={deletePost}>삭제</S.DeleteButton>}
       </S.Title>
       <Price price={price} />
+      <p>계좌: {account}</p>
       <S.PurchaseButton onClick={() => nav.push(`/hand-sign/${id}`)}>
         구매하기
       </S.PurchaseButton>
