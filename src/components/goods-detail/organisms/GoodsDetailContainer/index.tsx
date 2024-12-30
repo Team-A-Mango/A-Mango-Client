@@ -41,83 +41,82 @@ interface MyInfo {
 const GoodsDetailContainer = ({ params }: Props) => {
   const [goodsDetail, setGoodsDetail] = useState<Detail | null>(null)
   const [liked, setLiked] = useState(false)
-  const [mine, setMine] = useState<boolean>(false)
-  const [myInfo, setMyInfo] = useState<MyInfo | null>()
-  const [comment, setComment] = useState<string>('')
+  const [mine, setMine] = useState(false)
+  const [myInfo, setMyInfo] = useState<MyInfo | null>(null)
+  const [comment, setComment] = useState('')
+
   const getGoodsDetail = async () => {
     try {
-      const goods = await authInstance.get(`/product/${params.id}`)
-      setGoodsDetail(goods.data)
-      setLiked(goods.data.check)
+      const response = await authInstance.get(`/product/${params.id}`)
+      setGoodsDetail(response.data)
+      setLiked(response.data.check)
     } catch (err) {
-      console.log(err)
+      console.error('Error fetching product details:', err)
     }
   }
+
+  // 좋아요 상태 변경
   const handleLikeClick = async () => {
     try {
-      const response = await authInstance.patch(`/product/${params.id}/like`, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      })
-
+      const response = await authInstance.patch(`/product/${params.id}/like`)
       if (response.status === 200) {
-        console.log('Successfully updated like status.')
-        setLiked(!response.data.check)
-
-        const updatedLikes = response.data.likes
+        setLiked(!liked)
         setGoodsDetail((prev) =>
-          prev
-            ? {
-                ...prev,
-                likes: updatedLikes,
-              }
-            : null,
+          prev ? { ...prev, likes: response.data.likes } : null,
         )
-
-        setLiked((prev) => !prev)
-      } else {
-        console.error('Failed to update like status.', response)
       }
     } catch (error) {
-      console.error('Error while updating like status:', error)
+      console.error('Error updating like status:', error)
     }
   }
 
-  const isMine = async () => {
+  const fetchMyInfo = async () => {
     try {
-      const my = await (await authInstance.get('/my/info')).data
-      setMyInfo(my)
+      const response = await authInstance.get('/my/info')
+      setMyInfo(response.data)
     } catch (error) {
-      console.log(error)
+      console.error('Error fetching user info:', error)
     }
   }
 
   const addComment = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const input = document.getElementById('input')
+
+    if (comment.trim() === '') {
+      alert('댓글을 작성하지 않으셨습니다.')
+      return
+    }
+
     try {
-      if (comment.length <= 0) {
-        alert('댓글을 작성하지 않으셨습니다.')
-        input?.focus()
-        return false
-      }
       await authInstance.post(`/inquiry/${params.id}`, {
         content: comment,
       })
-    } catch (e) {
-      console.log(e)
+
+      const newComment: Inquiry = {
+        content: comment,
+        author: myInfo?.nickname || '익명',
+        profileImag: myInfo?.profile || TestImg.src,
+      }
+
+      setGoodsDetail((prev) =>
+        prev ? { ...prev, inquiries: [...prev.inquiries, newComment] } : null,
+      )
+      setComment('')
+    } catch (error) {
+      console.error('Error adding comment:', error)
     }
   }
 
   useEffect(() => {
     getGoodsDetail()
-    isMine()
+    fetchMyInfo()
   }, [])
 
   useEffect(() => {
-    if (myInfo?.nickname === goodsDetail?.author) setMine(true)
-  })
+    if (myInfo?.nickname === goodsDetail?.author) {
+      setMine(true)
+    }
+  }, [myInfo, goodsDetail])
 
   return (
     <S.Wrapper>
@@ -136,7 +135,7 @@ const GoodsDetailContainer = ({ params }: Props) => {
                 <GoodsDeta
                   title={goodsDetail?.title || '제목'}
                   profileImg={goodsDetail?.profileImg}
-                  author={goodsDetail?.author || '김진원'}
+                  author={goodsDetail?.author || '작성자'}
                 />
                 <S.LikeContainer onClick={handleLikeClick}>
                   <Like Liked={liked} />
@@ -149,10 +148,7 @@ const GoodsDetailContainer = ({ params }: Props) => {
                 mine={mine}
               />
               <S.CommentButton
-                onClick={() => {
-                  const input = document.getElementById('input')
-                  input?.focus()
-                }}
+                onClick={() => document.getElementById('input')?.focus()}
               >
                 댓글 쓰기
               </S.CommentButton>
@@ -167,13 +163,13 @@ const GoodsDetailContainer = ({ params }: Props) => {
               }}
             >
               <S.CommentTitle>
-                <h2>댓글</h2> {`${0}개`}
+                <h2>댓글</h2> {`${goodsDetail?.inquiries.length || 0}개`}
               </S.CommentTitle>
               <S.CommentInputWrapper onSubmit={addComment}>
                 <S.CommentProfile style={{ borderRight: '1px solid #d5d5d5' }}>
                   <Image
                     src={myInfo?.profile || TestImg}
-                    alt={'프로필 이미지'}
+                    alt='프로필 이미지'
                     width={26}
                     height={26}
                   />
@@ -194,7 +190,7 @@ const GoodsDetailContainer = ({ params }: Props) => {
                   <S.CommentProfile>
                     <Image
                       src={item.profileImag || TestImg}
-                      alt={'프로�� 이미지'}
+                      alt='프로필 이미지'
                       width={26}
                       height={26}
                     />
