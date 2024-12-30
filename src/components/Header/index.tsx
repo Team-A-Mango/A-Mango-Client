@@ -31,7 +31,6 @@ const Header = () => {
           style={{ color: isActivePage('/mypage') ? '#F9AA38' : '#121212' }}
         >
           <Person fill={isActivePage('/mypage') ? '#F9AA38' : '#121212'} />
-          김진원
         </S.Button>
       </S.ButtonWrapper>
     </S.Container>
