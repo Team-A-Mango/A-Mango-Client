@@ -57,7 +57,16 @@ const GoodsListItem = ({
   return (
     <S.ItemWrapper onClick={routing}>
       <S.ItemContainer>
-        <Image src={imageURL} alt={title} width={200} height={200} />
+        <Image
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+          src={imageURL}
+          alt={title}
+          width={200}
+          height={200}
+        />
         <S.TextTitleData>
           <S.Title>{title}</S.Title>
           <S.PriceText>{price}원</S.PriceText>

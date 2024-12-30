@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import * as S from './style'
 import { authInstance } from '@/api/axios'
-import TestImg from '@/assets/png/TestImg.png'
+import MangoImg from '@/assets/png/MangoImg.png'
 import { Mango, Setting, Wave } from '@/assets/svg'
 
 interface Me {
@@ -44,7 +44,7 @@ const Profile = () => {
               <Image
                 width={100}
                 height={100}
-                src={info?.profile || TestImg}
+                src={info?.profile || MangoImg}
                 alt='아무사진'
               />
             </S.ProfileImg>
